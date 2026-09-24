@@ -108,28 +108,28 @@
 
                             {{-- Slide 1 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/booking/booking (1).png') }}"
+                                <img src="{{ asset('projects/booking/booking (1).png') }}"
                                     alt="Sistem Booking & Management Lapangan 1"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 2 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/booking/booking (2).png') }}"
+                                <img src="{{ asset('projects/booking/booking (2).png') }}"
                                     alt="Sistem Booking & Management Lapangan 2"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 3 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/booking/booking (3).png') }}"
+                                <img src="{{ asset('projects/booking/booking (3).png') }}"
                                     alt="Sistem Booking & Management Lapangan 3"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 4 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/booking/booking (4).png') }}"
+                                <img src="{{ asset('projects/booking/booking (4).png') }}"
                                     alt="Sistem Booking & Management Lapangan 4"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
@@ -173,25 +173,25 @@
 
                             {{-- Slide 1 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/digestar/digestar (1).jpeg') }}" alt="DigestAR 1"
+                                <img src="{{ asset('projects/digestar/digestar (1).jpeg') }}" alt="DigestAR 1"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 2 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/digestar/digestar (2).jpeg') }}" alt="DigestAR 2"
+                                <img src="{{ asset('projects/digestar/digestar (2).jpeg') }}" alt="DigestAR 2"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 3 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/digestar/digestar (3).jpeg') }}" alt="DigestAR 3"
+                                <img src="{{ asset('projects/digestar/digestar (3).jpeg') }}" alt="DigestAR 3"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 4 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/digestar/digestar (4).jpeg') }}" alt="DigestAR 4"
+                                <img src="{{ asset('projects/digestar/digestar (4).jpeg') }}" alt="DigestAR 4"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
@@ -381,28 +381,28 @@
 
                             {{-- Slide 1 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/diabetes/diabetes (1).jpeg') }}"
+                                <img src="{{ asset('projects/diabetes/diabetes (1).jpeg') }}"
                                     alt="Diabetes Self Management Education 1"
                                     class="h-full w-full object-contain object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 2 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/diabetes/diabetes (2).jpeg') }}"
+                                <img src="{{ asset('projects/diabetes/diabetes (2).jpeg') }}"
                                     alt="Diabetes Self Management Education 2"
                                     class="h-full w-full object-contain object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 3 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/diabetes/diabetes (3).jpeg') }}"
+                                <img src="{{ asset('projects/diabetes/diabetes (3).jpeg') }}"
                                     alt="Diabetes Self Management Education 3"
                                     class="h-full w-full object-contain object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 4 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/diabetes/diabetes (4).jpeg') }}"
+                                <img src="{{ asset('projects/diabetes/diabetes (4).jpeg') }}"
                                     alt="Diabetes Self Management Education 4"
                                     class="h-full w-full object-contain object-center select-none" draggable="false">
                             </div>
@@ -443,28 +443,28 @@
 
                             {{-- Slide 1 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/pensiun/pensiun (1).png') }}"
+                                <img src="{{ asset('projects/pensiun/pensiun (1).png') }}"
                                     alt="Sistem Kepensiunan Pegawai Non-ASN 1"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 2 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/pensiun/pensiun (2).png') }}"
+                                <img src="{{ asset('projects/pensiun/pensiun (2).png') }}"
                                     alt="Sistem Kepensiunan Pegawai Non-ASN 2"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 3 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/pensiun/pensiun (3).png') }}"
+                                <img src="{{ asset('projects/pensiun/pensiun (3).png') }}"
                                     alt="Sistem Kepensiunan Pegawai Non-ASN 3"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 4 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/pensiun/pensiun (4).png') }}"
+                                <img src="{{ asset('projects/pensiun/pensiun (4).png') }}"
                                     alt="Sistem Kepensiunan Pegawai Non-ASN 4"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
@@ -643,25 +643,25 @@
 
                             {{-- Slide 1 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/bimble/msib (1).png') }}" alt="Bimble BBC 1"
+                                <img src="{{ asset('projects/bimble/msib (1).png') }}" alt="Bimble BBC 1"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 2 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/bimble/msib (2).png') }}" alt="Bimble BBC 2"
+                                <img src="{{ asset('projects/bimble/msib (2).png') }}" alt="Bimble BBC 2"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 3 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/bimble/msib (3).png') }}" alt="Bimble BBC 3"
+                                <img src="{{ asset('projects/bimble/msib (3).png') }}" alt="Bimble BBC 3"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 4 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('storage/projects/bimble/msib (4).png') }}" alt="Bimble BBC 4"
+                                <img src="{{ asset('projects/bimble/msib (4).png') }}" alt="Bimble BBC 4"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 

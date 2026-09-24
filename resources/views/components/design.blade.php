@@ -22,70 +22,70 @@
 
             {{-- Feed 1 --}}
             <div class="group mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-gray-200 bg-gray-50">
-                <img src="{{ asset('storage/design/feed1.png') }}" alt="Social Media Design 1"
+                <img src="{{ asset('design/feed1.png') }}" alt="Social Media Design 1"
                     class="h-auto w-full cursor-zoom-in transition duration-500 group-hover:scale-[1.02]" loading="lazy"
                     data-lightbox-image>
             </div>
 
             {{-- Feed 2 --}}
             <div class="group mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-gray-200 bg-gray-50">
-                <img src="{{ asset('storage/design/feed2.png') }}" alt="Social Media Design 2"
+                <img src="{{ asset('design/feed2.png') }}" alt="Social Media Design 2"
                     class="h-auto w-full cursor-zoom-in transition duration-500 group-hover:scale-[1.02]" loading="lazy"
                     data-lightbox-image>
             </div>
 
             {{-- Feed 3 --}}
             <div class="group mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-gray-200 bg-gray-50">
-                <img src="{{ asset('storage/design/feed3.png') }}" alt="Social Media Design 3"
+                <img src="{{ asset('design/feed3.png') }}" alt="Social Media Design 3"
                     class="h-auto w-full cursor-zoom-in transition duration-500 group-hover:scale-[1.02]" loading="lazy"
                     data-lightbox-image>
             </div>
 
             {{-- Feed 4 --}}
             <div class="group mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-gray-200 bg-gray-50">
-                <img src="{{ asset('storage/design/feed4.png') }}" alt="Social Media Design 4"
+                <img src="{{ asset('design/feed4.png') }}" alt="Social Media Design 4"
                     class="h-auto w-full cursor-zoom-in transition duration-500 group-hover:scale-[1.02]" loading="lazy"
                     data-lightbox-image>
             </div>
 
             {{-- Feed 5 --}}
             <div class="group mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-gray-200 bg-gray-50">
-                <img src="{{ asset('storage/design/feed5.png') }}" alt="Social Media Design 5"
+                <img src="{{ asset('design/feed5.png') }}" alt="Social Media Design 5"
                     class="h-auto w-full cursor-zoom-in transition duration-500 group-hover:scale-[1.02]" loading="lazy"
                     data-lightbox-image>
             </div>
 
             {{-- Feed 6 --}}
             <div class="group mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-gray-200 bg-gray-50">
-                <img src="{{ asset('storage/design/feed6.png') }}" alt="Social Media Design 6"
+                <img src="{{ asset('design/feed6.png') }}" alt="Social Media Design 6"
                     class="h-auto w-full cursor-zoom-in transition duration-500 group-hover:scale-[1.02]" loading="lazy"
                     data-lightbox-image>
             </div>
 
             {{-- Frame Story --}}
             <div class="group mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-gray-200 bg-gray-50">
-                <img src="{{ asset('storage/design/frameStory.png') }}" alt="Story Frame Design"
+                <img src="{{ asset('design/frameStory.png') }}" alt="Story Frame Design"
                     class="h-auto w-full cursor-zoom-in transition duration-500 group-hover:scale-[1.02]" loading="lazy"
                     data-lightbox-image>
             </div>
 
             {{-- Poster 1 --}}
             <div class="group mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-gray-200 bg-gray-50">
-                <img src="{{ asset('storage/design/poster1.jpg') }}" alt="Poster Design 1"
+                <img src="{{ asset('design/poster1.jpg') }}" alt="Poster Design 1"
                     class="h-auto w-full cursor-zoom-in transition duration-500 group-hover:scale-[1.02]" loading="lazy"
                     data-lightbox-image>
             </div>
 
             {{-- Poster 2 --}}
             <div class="group mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-gray-200 bg-gray-50">
-                <img src="{{ asset('storage/design/poster2.png') }}" alt="Poster Design 2"
+                <img src="{{ asset('design/poster2.png') }}" alt="Poster Design 2"
                     class="h-auto w-full cursor-zoom-in transition duration-500 group-hover:scale-[1.02]" loading="lazy"
                     data-lightbox-image>
             </div>
 
             {{-- Story --}}
             <div class="group mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-gray-200 bg-gray-50">
-                <img src="{{ asset('storage/design/story.png') }}" alt="Story Design"
+                <img src="{{ asset('design/story.png') }}" alt="Story Design"
                     class="h-auto w-full cursor-zoom-in transition duration-500 group-hover:scale-[1.02]" loading="lazy"
                     data-lightbox-image>
             </div>
