@@ -1,4 +1,114 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const reveals = document.querySelectorAll(".reveal");
+
+    if (reveals.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Ketika elemen masuk ke layar -> Tambahkan animasi
+                    entry.target.classList.add("active");
+                } else {
+                    // Ketika elemen keluar dari layar -> Reset animasi
+                    entry.target.classList.remove("active");
+                }
+            });
+        }, {
+            threshold: 0.15 // Elemen terpicu jika minimal 15% bagiannya terlihat
+        });
+
+        reveals.forEach((el) => observer.observe(el));
+    }
+// ==========================================
+// 3D Point-Wave Canvas Background (Double Mirror)
+// ==========================================
+const canvas = document.getElementById('bgCanvas');
+if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let W = (canvas.width = canvas.parentElement ? canvas.parentElement.clientWidth : window.innerWidth);
+    let H = (canvas.height = canvas.parentElement ? canvas.parentElement.clientHeight : window.innerHeight);
+    let pixels = [];
+
+    function initPixels() {
+        pixels = [];
+        // Rentang grid X dan Z
+        for (let x = -400; x < 400; x += 5) {
+            for (let z = -250; z < 250; z += 5) {
+                pixels.push({ x: x, y: 0, z: z });
+            }
+        }
+    }
+
+    initPixels();
+
+    window.addEventListener('resize', () => {
+        if (canvas.parentElement) {
+            W = canvas.width = canvas.parentElement.clientWidth;
+            H = canvas.height = canvas.parentElement.clientHeight;
+        } else {
+            W = canvas.width = window.innerWidth;
+            H = canvas.height = window.innerHeight;
+        }
+    });
+
+    function render(ts) {
+        const imageData = ctx.getImageData(0, 0, W, H);
+        const len = pixels.length;
+        const fov = 250;
+        let pixel, scale, x2d, y2d_top, y2d_bottom, cTop, cBottom;
+
+        // Fungsi helper kecil untuk set pixel warna hijau (#BBFE01)
+        const setPixelColor = (x, y) => {
+            if (x >= 0 && x <= W && y >= 0 && y <= H) {
+                const index = (Math.round(y) * imageData.width + Math.round(x)) * 4;
+                imageData.data[index] = 187;     // R
+                imageData.data[index + 1] = 254; // G
+                imageData.data[index + 2] = 1;   // B
+                imageData.data[index + 3] = 255; // Alpha
+            }
+        };
+
+        for (let i = 0; i < len; i++) {
+            pixel = pixels[i];
+            scale = fov / (fov + pixel.z);
+            x2d = pixel.x * scale + W / 2;
+            
+            // 1. GELOMBANG ATAS (Menghadap / Melengkung ke Atas)
+            // Offset di area 15% dari atas canvas
+            y2d_top = pixel.y * scale + (H * 0.50);
+            setPixelColor(x2d, y2d_top);
+
+            // 2. GELOMBANG BAWAH (Mirror / Lawan Arah ke Bawah)
+            // Menggunakan -pixel.y agar gelombangnya terbalik penuh
+            // Offset di area 85% dari atas canvas (di bagian bawah)
+            y2d_bottom = (-pixel.y) * scale + (H * 0.50);
+            setPixelColor(x2d, y2d_bottom);
+
+            // Pergerakan Z (maju)
+            pixel.z -= 0.4;
+            
+            // Pergerakan Gelombang Y
+            pixel.y = -80 + Math.sin((i / len) * 15 + ts / 450) * 18;
+
+            // Reset loop kedalaman Z
+            if (pixel.z < -fov) pixel.z += 2 * fov;
+        }
+
+        ctx.putImageData(imageData, 0, 0);
+    }
+
+    function drawFrame(ts) {
+        requestAnimationFrame(drawFrame);
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(0, 0, W, H);
+        render(ts);
+    }
+
+    requestAnimationFrame(drawFrame);
+}
+
+    // ==========================================
+    // Carousel & Kode JS Anda Selanjutnya...
+    // ==========================================
     const carousels = document.querySelectorAll('[data-carousel]');
 
     carousels.forEach((carousel) => {
@@ -125,7 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
 
     // Mobile Navbar
     const mobileMenuButton = document.getElementById('mobile-menu-button');

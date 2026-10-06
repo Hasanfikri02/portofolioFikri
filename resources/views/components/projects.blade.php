@@ -1,20 +1,32 @@
-<section id="projects" class="px-6 py-24 lg:px-8">
-    <div class="mx-auto max-w-7xl">
+<section id="projects" class="relative isolate overflow-hidden bg-background px-6 py-24 font-sans text-white lg:px-8">
+
+    {{-- Canvas Background --}}
+    <canvas id="bgCanvas" class="pointer-events-none absolute inset-0 -z-10 h-full w-full"></canvas>
+
+    {{-- 1. Gradient Bulatan Putih Tipis (Pojok Kiri Atas) --}}
+    <div class="white-spot-top-left z-0"></div>
+
+    {{-- 2. Gradient Bulatan Putih Tipis (Pojok Kanan Bawah) --}}
+    <div class="white-spot-bottom-right z-0"></div>
+
+    {{-- 3. Grid Pattern Layer (Hanya Terlihat di Spot Gradient) --}}
+    <div class="bg-grid-pattern mask-corner-spots pointer-events-none absolute inset-0 z-0 opacity-80"></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl">
 
         {{-- Section Header --}}
         <div class="max-w-2xl">
 
-            <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-gray-500">
+            <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
                 Projects
             </p>
 
-            <h2 class="text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl">
+            <h2 class="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
                 Selected projects I've worked on.
             </h2>
 
-            <p class="mt-5 text-lg leading-8 text-gray-600">
-                A selection of academic, collaborative, and individual
-                projects developed across different technologies.
+            <p class="mt-5 text-lg leading-8 text-white/80">
+                A selection of academic, collaborative, and individual projects developed through coursework, professional programs, research, and real-world development experience.
             </p>
 
         </div>
@@ -29,41 +41,41 @@
 
                 {{-- Project Information --}}
                 <div>
-
-                    <p class="text-sm font-medium text-gray-400">
-                        01
-                    </p>
-
-                    <h3 class="mt-3 text-3xl font-bold tracking-tight text-gray-900">
+                    <h3 class="mt-3 text-3xl font-bold tracking-tight text-white">
                         Sistem Booking & Management Lapangan
                     </h3>
 
+                    {{-- Badges / Tech Stack --}}
                     <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
+                        <span
+                            class="rounded-full border bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
                             Laravel
                         </span>
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
+                        <span
+                            class="rounded-full border bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
                             PHP
                         </span>
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
+                        <span
+                            class="rounded-full border bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
                             MySQL
                         </span>
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
+                        <span
+                            class="rounded-full border bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
                             Midtrans
                         </span>
                     </div>
 
-                    <p class="mt-6 text-sm font-medium text-gray-500">
+                    <p class="mt-6 text-sm font-medium uppercase tracking-wider text-white/60">
                         Collaborative Project
                     </p>
 
-                    <ul class="mt-4 space-y-3 text-gray-600">
+                    <ul class="mt-4 space-y-3 text-white/80">
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
                                 Mengembangkan sistem pemesanan dan pengelolaan
                                 lapangan berbasis web.
@@ -71,7 +83,7 @@
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
                                 Mengimplementasikan fitur pengecekan ketersediaan
                                 lapangan, jadwal, dan kalender pemesanan.
@@ -79,7 +91,7 @@
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
                                 Berkontribusi dalam integrasi pembayaran menggunakan
                                 Midtrans, termasuk pengelolaan bukti pembayaran.
@@ -87,7 +99,7 @@
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
                                 Mengembangkan dashboard admin dengan fitur
                                 pengelolaan pemesanan dan laporan keuangan.
@@ -101,58 +113,64 @@
 
                 {{-- Project Preview --}}
                 <div class="group relative w-full" data-carousel>
-                    {{-- Carousel Body / Image Container --}}
-                    <div class="relative aspect-16/10 w-full overflow-hidden">
+                    {{-- Carousel Body / Image Container (Tanpa Border) --}}
+                    <div class="relative w-full overflow-hidden ">
                         {{-- Slides Track --}}
                         <div class="flex h-full w-full transition-transform duration-500 ease-out" data-carousel-track>
 
                             {{-- Slide 1 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/booking/booking (1).png') }}"
+                                <img src="{{ asset('projects/booking/Sampanganlap1.png') }}"
                                     alt="Sistem Booking & Management Lapangan 1"
-                                    class="h-full w-full object-cover object-center select-none" draggable="false">
+                                    class="max-w-md h-auto object-contain select-none" draggable="false">
                             </div>
 
                             {{-- Slide 2 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/booking/booking (2).png') }}"
+                                <img src="{{ asset('projects/booking/Sampanganlap2.png') }}"
                                     alt="Sistem Booking & Management Lapangan 2"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 3 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/booking/booking (3).png') }}"
+                                <img src="{{ asset('projects/booking/Sampanganlap3.png') }}"
                                     alt="Sistem Booking & Management Lapangan 3"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 4 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/booking/booking (4).png') }}"
+                                <img src="{{ asset('projects/booking/Sampanganlap4.png') }}"
                                     alt="Sistem Booking & Management Lapangan 4"
+                                    class="h-full w-full object-cover object-center select-none" draggable="false">
+                            </div>
+                            {{-- Slide 5 --}}
+                            <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
+                                <img src="{{ asset('projects/booking/Sampanganlap5.png') }}"
+                                    alt="Sistem Booking & Management Lapangan 5"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                         </div>
                     </div>
 
-                    {{-- Bottom Control Bar (Sejajar di Bawah Gambar) --}}
+                    {{-- Bottom Control Bar --}}
                     <div class="mt-4 flex items-center justify-center gap-4">
                         {{-- Previous Button --}}
                         <button type="button" data-carousel-prev aria-label="Previous project image"
-                            class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition hover:bg-gray-100 hover:text-gray-900 active:scale-95">
+                            class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900 backdrop-blur-md transition-all duration-300 hover:bg-accent  active:scale-95">
                             <i class="fa-solid fa-chevron-left text-xs"></i>
                         </button>
 
                         {{-- Indicator --}}
-                        <div class="text-xs font-semibold tracking-wider text-gray-500" data-carousel-indicator>
-                            1 / 4
+                        <div class="text-xs font-bold tracking-widest text-white" data-carousel-indicator>
+                            1 / 5
                         </div>
 
                         {{-- Next Button --}}
                         <button type="button" data-carousel-next aria-label="Next project image"
-                            class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition hover:bg-gray-100 hover:text-gray-900 active:scale-95">
+                            class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900 backdrop-blur-md transition-all duration-300 hover:bg-accent  active:scale-95">
                             <i class="fa-solid fa-chevron-right text-xs"></i>
                         </button>
                     </div>
@@ -164,34 +182,44 @@
             {{-- Project 2 --}}
             <article class="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
 
-                {{-- Project Preview: DigestAR --}}
+                {{-- Project Preview: Pensiun --}}
                 <div class="group relative w-full" data-carousel>
                     {{-- Carousel Body & Image Wrapper --}}
-                    <div class="relative aspect-16/10 w-full overflow-hidden">
+                    <div class="relative w-full overflow-hidden ">
                         {{-- Slides Track --}}
                         <div class="flex h-full w-full transition-transform duration-500 ease-out" data-carousel-track>
 
                             {{-- Slide 1 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/digestar/digestar (1).jpeg') }}" alt="DigestAR 1"
-                                    class="h-full w-full object-cover object-center select-none" draggable="false">
+                                <img src="{{ asset('projects/pensiun/pensiun1.png') }}"
+                                    alt="Sistem Kepensiunan Pegawai Non-ASN 1"
+                                    class="max-w-md h-auto object-contain select-none" draggable="false">
                             </div>
 
                             {{-- Slide 2 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/digestar/digestar (2).jpeg') }}" alt="DigestAR 2"
+                                <img src="{{ asset('projects/pensiun/pensiun2.png') }}"
+                                    alt="Sistem Kepensiunan Pegawai Non-ASN 2"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 3 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/digestar/digestar (3).jpeg') }}" alt="DigestAR 3"
+                                <img src="{{ asset('projects/pensiun/pensiun3.png') }}"
+                                    alt="Sistem Kepensiunan Pegawai Non-ASN 3"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 4 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/digestar/digestar (4).jpeg') }}" alt="DigestAR 4"
+                                <img src="{{ asset('projects/pensiun/pensiun4.png') }}"
+                                    alt="Sistem Kepensiunan Pegawai Non-ASN 4"
+                                    class="h-full w-full object-cover object-center select-none" draggable="false">
+                            </div>
+                            {{-- Slide 5 --}}
+                            <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
+                                <img src="{{ asset('projects/pensiun/pensiun5.png') }}"
+                                    alt="Sistem Kepensiunan Pegawai Non-ASN 5"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
@@ -201,16 +229,16 @@
                     {{-- Controls & Indicator di Bawah Gambar --}}
                     <div class="mt-4 flex items-center justify-center gap-4">
                         <button type="button" data-carousel-prev aria-label="Previous project image"
-                            class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition hover:bg-gray-100 hover:text-gray-900 active:scale-95">
+                             class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900 backdrop-blur-md transition-all duration-300 hover:bg-accent  active:scale-95"">
                             <i class="fa-solid fa-chevron-left text-xs"></i>
                         </button>
 
-                        <div class="text-xs font-semibold tracking-wider text-gray-500" data-carousel-indicator>
-                            1 / 4
+                        <div class="text-xs font-bold tracking-wider text-white" data-carousel-indicator>
+                            1 / 5
                         </div>
 
                         <button type="button" data-carousel-next aria-label="Next project image"
-                            class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition hover:bg-gray-100 hover:text-gray-900 active:scale-95">
+                             class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900 backdrop-blur-md transition-all duration-300 hover:bg-accent  active:scale-95"">
                             <i class="fa-solid fa-chevron-right text-xs"></i>
                         </button>
                     </div>
@@ -219,83 +247,62 @@
 
                 {{-- Project Information --}}
                 <div class="order-1 lg:order-2">
-
-                    <p class="text-sm font-medium text-gray-400">
-                        02
-                    </p>
-
-                    <h3 class="mt-3 text-3xl font-bold tracking-tight text-gray-900">
-                        DigestAR
+                    <h3 class="mt-3 text-3xl font-bold tracking-tight text-white">
+                        Sistem Kepensiunan Pegawai Non-ASN
                     </h3>
-
-                    <p class="mt-1 text-sm font-medium text-gray-500">
-                        Aplikasi Augmented Reality untuk Pembelajaran Sistem Pencernaan
-                    </p>
 
                     <div class="mt-4 flex flex-wrap gap-2">
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
-                            Unity
+                        <span class="rounded-full border bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
+                            Laravel
                         </span>
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
-                            C#
+                        <span class="rounded-full border bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
+                            PHP
                         </span>
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
-                            Augmented Reality
-                        </span>
-
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
-                            Fisher-Yates
+                        <span class="rounded-full border bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
+                            MySQL
                         </span>
 
                     </div>
 
-                    <p class="mt-6 text-sm font-medium text-gray-500">
-                        Individual Project & Final Research
+                    <p class="mt-6 text-sm font-medium uppercase tracking-wider text-white/60">
+                        Collaborative Project — Universitas Diponegoro
                     </p>
 
-                    <ul class="mt-4 space-y-3 text-gray-600">
+                    <ul class="mt-4 space-y-3 text-white/80">
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
-                                Mengembangkan aplikasi Android berbasis Augmented
-                                Reality untuk membantu pembelajaran sistem
-                                pencernaan bagi siswa SD kelas 5.
+                                Berkontribusi pada pengembangan role Super Admin,
+                                Supervisor, dan Pemroses.
                             </span>
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
-                                Mengembangkan fitur pembelajaran interaktif
-                                menggunakan Unity dan C#.
+                                Mengimplementasikan autentikasi dan pembatasan
+                                akses berdasarkan role pengguna.
                             </span>
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
-                                Menerapkan algoritma Fisher-Yates untuk melakukan
-                                pengacakan soal kuis.
+                                Mengembangkan fitur pengelolaan data, upload
+                                dokumen, serta pemantauan status dan progres
+                                proses pensiun.
                             </span>
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
-                                Melakukan penelitian terkait pengembangan dan
-                                penggunaan aplikasi sebagai media pembelajaran.
-                            </span>
-                        </li>
-
-                        <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
-                            <span>
-                                Penelitian dipublikasikan pada jurnal SISFOKOM
-                                dan terindeks SINTA 3.
+                                Mengembangkan antarmuka menggunakan Laravel Blade
+                                dan mengelola data menggunakan MySQL.
                             </span>
                         </li>
 
@@ -311,39 +318,34 @@
 
                 {{-- Project Information --}}
                 <div>
-
-                    <p class="text-sm font-medium text-gray-400">
-                        03
-                    </p>
-
-                    <h3 class="mt-3 text-3xl font-bold tracking-tight text-gray-900">
+                    <h3 class="mt-3 text-3xl font-bold tracking-tight text-white">
                         Diabetes Self Management Education
                     </h3>
 
                     <div class="mt-4 flex flex-wrap gap-2">
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
+                        <span class="rounded-full border bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
                             Flutter
                         </span>
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
+                        <span class="rounded-full border bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
                             Dart
                         </span>
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
+                        <span class="rounded-full border bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
                             Firebase
                         </span>
 
                     </div>
 
-                    <p class="mt-6 text-sm font-medium text-gray-500">
+                    <p class="mt-6 text-sm font-medium uppercase tracking-wider text-white/60">
                         Individual Project
                     </p>
 
-                    <ul class="mt-4 space-y-3 text-gray-600">
+                    <ul class="mt-4 space-y-3 text-white/80">
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
                                 Mengembangkan aplikasi mobile untuk mendukung
                                 edukasi, pencatatan, dan pengelolaan aktivitas
@@ -352,7 +354,7 @@
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
                                 Mengintegrasikan Firebase sebagai layanan backend
                                 dan pengelolaan data aplikasi.
@@ -360,7 +362,7 @@
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
                                 Merancang dan mengimplementasikan antarmuka
                                 aplikasi dengan memperhatikan User Experience.
@@ -381,29 +383,35 @@
 
                             {{-- Slide 1 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/diabetes/diabetes (1).jpeg') }}"
+                                <img src="{{ asset('projects/diabetes/diabetes1.png') }}"
                                     alt="Diabetes Self Management Education 1"
                                     class="h-full w-full object-contain object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 2 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/diabetes/diabetes (2).jpeg') }}"
+                                <img src="{{ asset('projects/diabetes/diabetes2.png') }}"
                                     alt="Diabetes Self Management Education 2"
                                     class="h-full w-full object-contain object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 3 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/diabetes/diabetes (3).jpeg') }}"
+                                <img src="{{ asset('projects/diabetes/diabetes3.png') }}"
                                     alt="Diabetes Self Management Education 3"
                                     class="h-full w-full object-contain object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 4 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/diabetes/diabetes (4).jpeg') }}"
+                                <img src="{{ asset('projects/diabetes/diabetes4.png') }}"
                                     alt="Diabetes Self Management Education 4"
+                                    class="h-full w-full object-contain object-center select-none" draggable="false">
+                            </div>
+                            {{-- Slide 5 --}}
+                            <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
+                                <img src="{{ asset('projects/diabetes/diabetes5.png') }}"
+                                    alt="Diabetes Self Management Education 5"
                                     class="h-full w-full object-contain object-center select-none" draggable="false">
                             </div>
 
@@ -413,16 +421,16 @@
                     {{-- Controls & Indicator di Bawah Gambar --}}
                     <div class="mt-4 flex items-center justify-center gap-4">
                         <button type="button" data-carousel-prev aria-label="Previous project image"
-                            class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition hover:bg-gray-100 hover:text-gray-900 active:scale-95">
+                             class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900 backdrop-blur-md transition-all duration-300 hover:bg-accent  active:scale-95"">
                             <i class="fa-solid fa-chevron-left text-xs"></i>
                         </button>
 
-                        <div class="text-xs font-semibold tracking-wider text-gray-500" data-carousel-indicator>
-                            1 / 4
+                        <div class="text-xs font-bold tracking-wider text-white" data-carousel-indicator>
+                            1 / 5
                         </div>
 
                         <button type="button" data-carousel-next aria-label="Next project image"
-                            class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition hover:bg-gray-100 hover:text-gray-900 active:scale-95">
+                             class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900 backdrop-blur-md transition-all duration-300 hover:bg-accent  active:scale-95"">
                             <i class="fa-solid fa-chevron-right text-xs"></i>
                         </button>
                     </div>
@@ -434,38 +442,39 @@
             {{-- Project 4 --}}
             <article class="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
 
-                {{-- Project Preview: Pensiun --}}
+                {{-- Project Preview: DigestAR (Tanpa Border) --}}
                 <div class="group relative w-full" data-carousel>
                     {{-- Carousel Body & Image Wrapper --}}
-                    <div class="relative aspect-16/10 w-full overflow-hidden ">
+                    <div class="relative w-full overflow-hidden rounded-xl">
                         {{-- Slides Track --}}
                         <div class="flex h-full w-full transition-transform duration-500 ease-out" data-carousel-track>
 
                             {{-- Slide 1 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/pensiun/pensiun (1).png') }}"
-                                    alt="Sistem Kepensiunan Pegawai Non-ASN 1"
+                                <img src="{{ asset('projects/digestar/digestar1.png') }}" alt="DigestAR 1"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 2 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/pensiun/pensiun (2).png') }}"
-                                    alt="Sistem Kepensiunan Pegawai Non-ASN 2"
+                                <img src="{{ asset('projects/digestar/digestar2.png') }}" alt="DigestAR 2"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 3 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/pensiun/pensiun (3).png') }}"
-                                    alt="Sistem Kepensiunan Pegawai Non-ASN 3"
+                                <img src="{{ asset('projects/digestar/digestar3.png') }}" alt="DigestAR 3"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 4 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/pensiun/pensiun (4).png') }}"
-                                    alt="Sistem Kepensiunan Pegawai Non-ASN 4"
+                                <img src="{{ asset('projects/digestar/digestar4.png') }}" alt="DigestAR 4"
+                                    class="h-full w-full object-cover object-center select-none" draggable="false">
+                            </div>
+                            {{-- Slide 5 --}}
+                            <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
+                                <img src="{{ asset('projects/digestar/digestar5.png') }}" alt="DigestAR 5"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
@@ -473,18 +482,18 @@
                     </div>
 
                     {{-- Controls & Indicator di Bawah Gambar --}}
-                    <div class="mt-4 flex items-center justify-center gap-4">
+                    <div class="mt-4 flex items-center justify-center gap-4 pb-2">
                         <button type="button" data-carousel-prev aria-label="Previous project image"
-                            class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition hover:bg-gray-100 hover:text-gray-900 active:scale-95">
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-900 backdrop-blur-md transition-all duration-300 hover:bg-accent  active:scale-95">
                             <i class="fa-solid fa-chevron-left text-xs"></i>
                         </button>
 
-                        <div class="text-xs font-semibold tracking-wider text-gray-500" data-carousel-indicator>
-                            1 / 4
+                        <div class="text-xs font-bold tracking-wider text-white" data-carousel-indicator>
+                            1 / 5
                         </div>
 
                         <button type="button" data-carousel-next aria-label="Next project image"
-                            class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition hover:bg-gray-100 hover:text-gray-900 active:scale-95">
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-900 backdrop-blur-md transition-all duration-300 hover:bg-accent  active:scale-95">
                             <i class="fa-solid fa-chevron-right text-xs"></i>
                         </button>
                     </div>
@@ -494,66 +503,78 @@
                 {{-- Project Information --}}
                 <div class="order-1 lg:order-2">
 
-                    <p class="text-sm font-medium text-gray-400">
-                        04
-                    </p>
-
-                    <h3 class="mt-3 text-3xl font-bold tracking-tight text-gray-900">
-                        Sistem Kepensiunan Pegawai Non-ASN
+                    <h3 class="mt-2 text-3xl font-bold tracking-tight text-white">
+                        DigestAR
                     </h3>
+
+                    <p class="mt-1 text-sm font-medium text-gray-400">
+                        Aplikasi Augmented Reality untuk Pembelajaran Sistem Pencernaan
+                    </p>
 
                     <div class="mt-4 flex flex-wrap gap-2">
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
-                            Laravel
+                        <span
+                            class="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
+                            Unity
                         </span>
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
-                            PHP
+                        <span
+                            class="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
+                            C#
                         </span>
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
-                            MySQL
+                        <span
+                            class="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
+                            Augmented Reality
+                        </span>
+
+                        <span
+                            class="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
+                            Fisher-Yates
                         </span>
 
                     </div>
 
-                    <p class="mt-6 text-sm font-medium text-gray-500">
-                        Collaborative Project — Universitas Diponegoro
+                    <p class="mt-6 text-sm font-semibold text-gray-400">
+                        Individual Project & Final Research
                     </p>
 
-                    <ul class="mt-4 space-y-3 text-gray-600">
+                    <ul class="mt-4 space-y-3 text-gray-300">
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
-                                Berkontribusi pada pengembangan role Super Admin,
-                                Supervisor, dan Pemroses.
+                                Mengembangkan aplikasi Android berbasis Augmented Reality untuk membantu pembelajaran
+                                sistem pencernaan bagi siswa SD kelas 5.
                             </span>
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
-                                Mengimplementasikan autentikasi dan pembatasan
-                                akses berdasarkan role pengguna.
+                                Mengembangkan fitur pembelajaran interaktif menggunakan Unity dan C#.
                             </span>
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
-                                Mengembangkan fitur pengelolaan data, upload
-                                dokumen, serta pemantauan status dan progres
-                                proses pensiun.
+                                Menerapkan algoritma Fisher-Yates untuk melakukan pengacakan soal kuis.
                             </span>
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
-                                Mengembangkan antarmuka menggunakan Laravel Blade
-                                dan mengelola data menggunakan MySQL.
+                                Melakukan penelitian terkait pengembangan dan penggunaan aplikasi sebagai media
+                                pembelajaran.
+                            </span>
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                            <span>
+                                Penelitian dipublikasikan pada jurnal SISFOKOM dan terindeks SINTA 3.
                             </span>
                         </li>
 
@@ -570,34 +591,30 @@
                 {{-- Project Information --}}
                 <div>
 
-                    <p class="text-sm font-medium text-gray-400">
-                        05
-                    </p>
-
-                    <h3 class="mt-3 text-3xl font-bold tracking-tight text-gray-900">
+                    <h3 class="mt-3 text-3xl font-bold tracking-tight text-white">
                         Platform Layanan Bimble BBC
                     </h3>
 
                     <div class="mt-4 flex flex-wrap gap-2">
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
+                        <span class="rounded-full border bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
                             Python
                         </span>
 
-                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
+                        <span class="rounded-full border bg-accent px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
                             MongoDB
                         </span>
 
                     </div>
 
-                    <p class="mt-6 text-sm font-medium text-gray-500">
+                    <p class="mt-6 text-sm font-medium uppercase tracking-wider text-white/60">
                         Collaborative Project — Real-world Case Study
                     </p>
 
-                    <ul class="mt-4 space-y-3 text-gray-600">
+                    <ul class="mt-4 space-y-3 text-white/80">
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
                                 Mengembangkan platform pendaftaran bimble berbasis
                                 web untuk menampilkan layanan dan memungkinkan
@@ -606,7 +623,7 @@
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
                                 Mengimplementasikan autentikasi serta sistem role
                                 admin dan user.
@@ -614,7 +631,7 @@
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
                                 Mengembangkan fitur layanan, pendaftaran, dan
                                 fitur informatif lainnya.
@@ -622,7 +639,7 @@
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"></span>
+                            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                             <span>
                                 Menggunakan Python dan MongoDB untuk membangun
                                 fungsionalitas serta pengelolaan data aplikasi.
@@ -637,31 +654,36 @@
                 {{-- Project Preview: Bimble BBC --}}
                 <div class="group relative w-full" data-carousel>
                     {{-- Carousel Body & Image Wrapper --}}
-                    <div class="relative aspect-16/10 w-full overflow-hidden">
+                    <div class="relative w-full overflow-hidden">
                         {{-- Slides Track --}}
                         <div class="flex h-full w-full transition-transform duration-500 ease-out" data-carousel-track>
 
                             {{-- Slide 1 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/bimble/msib (1).png') }}" alt="Bimble BBC 1"
-                                    class="h-full w-full object-cover object-center select-none" draggable="false">
+                                <img src="{{ asset('projects/bimble/msib1.png') }}" alt="Bimble BBC 1"
+                                    class="max-w-md h-auto object-contain select-none" draggable="false">
                             </div>
 
                             {{-- Slide 2 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/bimble/msib (2).png') }}" alt="Bimble BBC 2"
+                                <img src="{{ asset('projects/bimble/msib2.png') }}" alt="Bimble BBC 2"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 3 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/bimble/msib (3).png') }}" alt="Bimble BBC 3"
+                                <img src="{{ asset('projects/bimble/msib3.png') }}" alt="Bimble BBC 3"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
                             {{-- Slide 4 --}}
                             <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
-                                <img src="{{ asset('projects/bimble/msib (4).png') }}" alt="Bimble BBC 4"
+                                <img src="{{ asset('projects/bimble/msib4.png') }}" alt="Bimble BBC 4"
+                                    class="h-full w-full object-cover object-center select-none" draggable="false">
+                            </div>
+                            {{-- Slide 5 --}}
+                            <div class="flex h-full w-full min-w-full shrink-0 items-center justify-center">
+                                <img src="{{ asset('projects/bimble/msib5.png') }}" alt="Bimble BBC 5"
                                     class="h-full w-full object-cover object-center select-none" draggable="false">
                             </div>
 
@@ -671,16 +693,16 @@
                     {{-- Controls & Indicator di Bawah Gambar --}}
                     <div class="mt-4 flex items-center justify-center gap-4">
                         <button type="button" data-carousel-prev aria-label="Previous project image"
-                            class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition hover:bg-gray-100 hover:text-gray-900 active:scale-95">
+                             class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900 backdrop-blur-md transition-all duration-300 hover:bg-accent  active:scale-95"">
                             <i class="fa-solid fa-chevron-left text-xs"></i>
                         </button>
 
-                        <div class="text-xs font-semibold tracking-wider text-gray-500" data-carousel-indicator>
-                            1 / 4
+                        <div class="text-xs font-bold tracking-wider text-white" data-carousel-indicator>
+                            1 / 5
                         </div>
 
                         <button type="button" data-carousel-next aria-label="Next project image"
-                            class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition hover:bg-gray-100 hover:text-gray-900 active:scale-95">
+                             class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900 backdrop-blur-md transition-all duration-300 hover:bg-accent  active:scale-95"">
                             <i class="fa-solid fa-chevron-right text-xs"></i>
                         </button>
                     </div>
